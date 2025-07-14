@@ -1,0 +1,103 @@
+{
+  "workbench.colorTheme": "Xcode Default (Dark)",
+  "workbench.activityBar.location": "top",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "telemetry.telemetryLevel": "off",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "jest.autoRun": {},
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
+  "amazonQ.workspaceIndex": true,
+  "amazonQ.suppressPrompts": {
+    "amazonQSessionConfigurationMessage": true,
+    "amazonQChatDisclaimer": true,
+    "amazonQChatPairProgramming": true
+  },
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-b>": false,
+    "<C-d>": false,
+    "<C-u>": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.history": 50,
+  "vim.startInInsertMode": false,
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "ç"
+      ],
+      "after": [
+        "}"
+      ]
+    },
+    {
+      "before": [
+        "Ç"
+      ],
+      "after": [
+        "{"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "ç"
+      ],
+      "after": [
+        "}"
+      ]
+    },
+    {
+      "before": [
+        "Ç"
+      ],
+      "after": [
+        "{"
+      ]
+    }
+  ],
+  "vim.foldfix": true
+}

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "exportDate": "2025-07-13T17:32:54.341Z",
+    "browserVersion": "Mozilla Firefox (139.0.1)",
+    "totalExtensions": 5
+  },
+  "extensions": [
+    {
+      "name": "Firefox Multi-Account Containers",
+      "extensionId": "@testpilot-containers",
+      "internalUuid": "21056cf2-efae-4aba-b438-43873e16aa2f",
+      "url": "https://addons.mozilla.org/firefox/addon/multi-account-containers/"
+    },
+    {
+      "name": "QuicKey - The quick tab switcher",
+      "extensionId": "{0b289d05-9030-47a6-813b-aa80bbf959f5}",
+      "internalUuid": "c3461d57-b2fd-4352-9106-098b94465098",
+      "url": "https://addons.mozilla.org/firefox/addon/quickey/"
+    },
+    {
+      "name": "Tree Style Tab",
+      "extensionId": "treestyletab@piro.sakura.ne.jp",
+      "internalUuid": "cdb1d781-03c2-4780-a9b0-d891610de611",
+      "url": "https://addons.mozilla.org/firefox/addon/tree-style-tab/"
+    },
+    {
+      "name": "TWP - Translate Web Pages",
+      "extensionId": "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}",
+      "internalUuid": "d90a33a6-f47a-402d-a1b3-f793f30f1755",
+      "url": "https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/"
+    },
+    {
+      "name": "uBlock Origin",
+      "extensionId": "uBlock0@raymondhill.net",
+      "internalUuid": "08fb501e-3342-43b6-bd17-d614e3b24429",
+      "url": "https://addons.mozilla.org/firefox/addon/ublock-origin/"
+    }
+  ]
+}
