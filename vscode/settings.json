@@ -8,10 +8,11 @@
   "telemetry.enableTelemetry": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.fontLigatures": true,
@@ -39,18 +40,13 @@
   ],
   "eslint.format.enable": true,
   "eslint.alwaysShowStatus": true,
+  "eslint.run": "onSave",
   "jest.autoRun": {},
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper"
-  },
-  "amazonQ.workspaceIndex": true,
-  "amazonQ.suppressPrompts": {
-    "amazonQSessionConfigurationMessage": true,
-    "amazonQChatDisclaimer": true,
-    "amazonQChatPairProgramming": true
   },
   "vim.handleKeys": {
     "<C-f>": false,

@@ -10,7 +10,7 @@ Rectangle is a simple window manager. It can be installed using [this link](http
 
 ## Alfred
 
-Alfred is a productivity app and "Spotlight" alternative for MacOS. It can be installed using [this link](https://www.alfredapp.com/). For configuration, set the `cmd+l` as the hotkey for the Alfred search bar.
+Alfred is a productivity app and "Spotlight" alternative for MacOS. It can be installed using [this link](https://www.alfredapp.com/). For configuration, set the `cmd+ç` as the hotkey for the Alfred search bar.
 
 ## fzf
 
