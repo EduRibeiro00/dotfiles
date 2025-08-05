@@ -107,8 +107,8 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 
 alias zshconfig="nvim ~/.zshrc"
-alias ohmyzshconfig="nvim ~/.oh-my-zsh"
-alias nvimconfig="nvim ~/.config/nvim"
+alias ohmyzshconfig="cd ~/.oh-my-zsh && nvim"
+alias nvimconfig="cd ~/.config/nvim && nvim"
 
 alias python=python3
 alias pip=pip3
