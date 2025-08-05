@@ -13,7 +13,7 @@ return {
         left_mouse_command = 'buffer %d',
         middle_mouse_command = nil,
         indicator = {
-          icon = '▎',
+          icon = '',
           style = 'icon',
         },
         buffer_close_icon = '×',
@@ -32,7 +32,7 @@ return {
         show_close_icon = true,
         show_tab_indicators = true,
         persist_buffer_sort = true,
-        separator_style = 'slant',
+        separator_style = 'thin',
         enforce_regular_tabs = false,
         always_show_bufferline = true,
       },
