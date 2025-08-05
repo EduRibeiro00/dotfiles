@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export EDITOR="nvim"
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -111,17 +113,6 @@ alias nvimconfig="nvim ~/.config/nvim"
 alias python=python3
 alias pip=pip3
 
-# fzf aliases and functions
-fcd() {
-  local dir
-  dir=$(find . -type d 2>/dev/null | fzf +m) && cd "$dir"
-}
-
-vf() {
-  local file
-  file=$(fzf --query="$1") && nvim "$file"
-}
-
 gbs() {
   local branch
   branch=$(git branch --all --color=never | grep -v '\->' | sed 's/^..//' | sort -u | fzf --prompt="Switch to branch: ") || return
@@ -129,6 +120,16 @@ gbs() {
     git switch "${branch#remotes/origin/}"
   fi
 }
+
+ranger-cd() {
+    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
+    ranger --choosedir="$temp_file" -- "${@:-$PWD}"
+    if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
+        cd -- "$chosen_dir"
+    fi
+    rm -f -- "$temp_file"
+}
+alias r="ranger-cd"
 
 # Git aliases
 alias gs="git status -s"
