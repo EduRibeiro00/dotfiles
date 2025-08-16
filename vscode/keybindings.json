@@ -78,8 +78,8 @@
     "command": "workbench.action.focusEighthEditorGroup"
   },
   {
-    "key": "cmd+9",
-    "command": "workbench.action.lastEditorInGroup"
+    "key": "ctrl+9",
+    "command": "workbench.action.focusLastEditorGroup"
   },
   {
     "key": "cmd+shift+6",

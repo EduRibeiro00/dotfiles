@@ -1,8 +1,12 @@
 {
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
   "workbench.colorTheme": "Xcode Default (Dark)",
   "workbench.activityBar.location": "top",
+  "workbench.statusBar.visible": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
   "telemetry.telemetryLevel": "off",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -12,7 +16,7 @@
     "source.organizeImports": "explicit"
   },
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.fontLigatures": true,
@@ -21,16 +25,16 @@
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.validate": [
     "javascript",
