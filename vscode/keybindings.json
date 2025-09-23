@@ -1,5 +1,15 @@
 [
   {
+    "key": "ctrl+j",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "!(hasSearchResult && searchViewletVisible)"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "!(hasSearchResult && searchViewletVisible)"
+  },
+  {
     "key": "cmd+1",
     "command": "workbench.action.openEditorAtIndex1"
   },
@@ -119,12 +129,12 @@
   {
     "key": "ctrl+j",
     "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult || searchViewletVisible"
+    "when": "hasSearchResult && searchViewletVisible"
   },
   {
     "key": "ctrl+k",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult || searchViewletVisible"
+    "when": "hasSearchResult && searchViewletVisible"
   },
   {
     "key": "cmd+shift+space",

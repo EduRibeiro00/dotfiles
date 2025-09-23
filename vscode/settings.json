@@ -99,5 +99,6 @@
       ]
     }
   ],
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "editor.accessibilitySupport": "off"
 }
