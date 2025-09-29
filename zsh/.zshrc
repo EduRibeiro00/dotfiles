@@ -7,6 +7,9 @@ fi
 
 export EDITOR="nvim"
 
+# Enable vi mode
+bindkey -v
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -79,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-syntax-highlighting zsh-vi-mode fzf)
+plugins=(zsh-syntax-highlighting vi-mode fzf)
 
 source $ZSH/oh-my-zsh.sh
 
