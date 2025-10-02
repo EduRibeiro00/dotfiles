@@ -29,3 +29,13 @@ One of the extensions that should be present in the `extensions-list.json` file 
 
 - `tst-settings.json` - main settings/configuration file for Tree Style Tabs. Can also be exported/imported in the Tree Style Tabs configuration page.
 - `custom-css.json` - custom CSS that can be applied to the tabs panel. Can also be exported/imported in the Tree Style Tabs configuration page.
+
+### Shortkeys
+
+The [Shortkeys](https://addons.mozilla.org/firefox/addon/shortkeys/) extension allows the configuration of custom key shortcuts on Firefox. The `shortkeys/config.json` file contains the configuration of all shortcuts. In other to import it, follow these steps:
+
+- Install the Shortkeys Firefox extension
+- Go to "Manage Extension" -> "Preferences"
+- Select the "Import" tab
+- Paste the configuration that is present in the `shortkeys/config.json` file
+- Click "Import"

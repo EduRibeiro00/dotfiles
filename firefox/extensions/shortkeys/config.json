@@ -1,0 +1,24 @@
+[
+  {
+    "key": "ctrl+j",
+    "label": "Previous Tab",
+    "action": "prevtab",
+    "activeInInputs": true,
+    "blacklist": false,
+    "sites": "",
+    "sitesArray": [
+      ""
+    ]
+  },
+  {
+    "key": "ctrl+k",
+    "label": "Next Tab",
+    "action": "nexttab",
+    "activeInInputs": true,
+    "blacklist": false,
+    "sites": "",
+    "sitesArray": [
+      ""
+    ]
+  }
+]

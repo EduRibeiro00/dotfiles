@@ -34,6 +34,12 @@
       "extensionId": "uBlock0@raymondhill.net",
       "internalUuid": "08fb501e-3342-43b6-bd17-d614e3b24429",
       "url": "https://addons.mozilla.org/firefox/addon/ublock-origin/"
+    },
+    {
+      "name": "Shortkeys (Custom Keyboard Shortcuts)",
+      "extensionId": "Shortkeys@Shortkeys.com",
+      "internalUuid": "df2b3da9-0283-4a7b-a412-f416334e3947",
+      "url": "https://addons.mozilla.org/firefox/addon/shortkeys/"
     }
   ]
 }
