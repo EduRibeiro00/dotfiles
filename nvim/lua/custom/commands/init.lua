@@ -1,3 +1,6 @@
+-- Set block cursor for all modes
+vim.opt.guicursor = 'n-v-c-i:block'
+
 -- Setup Treesitter fold logic
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
@@ -54,3 +57,14 @@ vim.keymap.set('n', '<leader>cb', '<Plug>(git-conflict-both)', { desc = 'Accept 
 vim.keymap.set('n', '<leader>c0', '<Plug>(git-conflict-none)', { desc = 'Accept none' })
 vim.keymap.set('n', '<leader>cn', '<Plug>(git-conflict-next-conflict)', { desc = 'Next conflict' })
 vim.keymap.set('n', '<leader>cp', '<Plug>(git-conflict-prev-conflict)', { desc = 'Previous conflict' })
+
+-- Tab/buffer management
+vim.keymap.set('n', '<leader>w', '<cmd>bd<cr>', { desc = 'Close current buffer' })
+vim.keymap.set('n', '<leader>t', '<cmd>%bd|e#|bd#<cr>', { desc = 'Close all other buffers' })
+
+-- Copy full file path with Ctrl+Shift+C
+vim.keymap.set('n', '<C-S-c>', function()
+  local path = vim.fn.expand '%:p'
+  vim.fn.setreg('+', path)
+  vim.api.nvim_echo({ { 'Copied file path' } }, false, {})
+end, { desc = 'Copy full file path' })

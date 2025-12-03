@@ -24,7 +24,7 @@ local themes = {
             keywords = 'bold',
             functions = 'italic,bold',
           },
-          transparent = 'true',
+          -- transparent = 'true',
         },
       }
       vim.cmd 'colorscheme carbonfox' -- options: carbonfox, nightfox, duskfox, nordfox, terafox
@@ -32,6 +32,6 @@ local themes = {
   },
 }
 
-local ACTIVE_THEME = 'onedark'
+local ACTIVE_THEME = 'nightfox'
 
 return themes[ACTIVE_THEME]
