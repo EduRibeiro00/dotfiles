@@ -68,3 +68,15 @@ vim.keymap.set('n', '<C-S-c>', function()
   vim.fn.setreg('+', path)
   vim.api.nvim_echo({ { 'Copied file path' } }, false, {})
 end, { desc = 'Copy full file path' })
+
+-- Move selected lines up/down with Ctrl+Shift+J/K
+vim.keymap.set('v', '<C-S-j>', ":m '>+1<CR>gv=gv", { desc = 'Move lines down', silent = true })
+vim.keymap.set('v', '<C-S-k>', ":m '<-2<CR>gv=gv", { desc = 'Move lines up', silent = true })
+vim.keymap.set('n', '<C-S-j>', ':m .+1<CR>==', { desc = 'Move line down', silent = true })
+vim.keymap.set('n', '<C-S-k>', ':m .-2<CR>==', { desc = 'Move line up', silent = true })
+
+-- Tab/Shift+Tab for indent/unindent in visual and normal mode
+vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent selection', silent = true })
+vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent selection', silent = true })
+vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indent line', silent = true })
+vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Unindent line', silent = true })
