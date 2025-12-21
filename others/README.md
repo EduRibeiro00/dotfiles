@@ -1,16 +1,12 @@
 # Other things to install/configure
 
-# Homebrew
+## Homebrew
 
 Homebrew is a package manager for MacOS, that will allow the installation of other tools stated here. It can be installed using [this link](https://brew.sh/).
 
 ## Rectangle
 
 Rectangle is a simple window manager. It can be installed using [this link](https://rectangleapp.com/).
-
-## Alfred
-
-Alfred is a productivity app and "Spotlight" alternative for MacOS. It can be installed using [this link](https://www.alfredapp.com/). For configuration, set the `cmd+ç` as the hotkey for the Alfred search bar.
 
 ## fzf
 
