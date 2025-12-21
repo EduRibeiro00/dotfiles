@@ -1,4 +1,3 @@
-
 # Raycast
 
 The `/raycast` folder contains the configuration file needed to setup Raycast in another computer. It contains the `settings.rayconfig` file, which is a config file containing info about general settings, extensions, notes, etc. The Raycast shortcut should be set to `cmd+ç`. Raycast can be downloaded through [this link](https://www.raycast.com/).
