@@ -49,8 +49,8 @@ vim.keymap.set('n', '<leader>cp', '<Plug>(git-conflict-prev-conflict)', { desc =
 vim.keymap.set('n', '<leader>w', '<cmd>bd<cr>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>t', '<cmd>%bd|e#|bd#<cr>', { desc = 'Close all other buffers' })
 
--- Copy full file path with Ctrl+Shift+C
-vim.keymap.set('n', '<C-S-c>', function()
+-- Copy full file path with
+vim.keymap.set('n', '<leader>cp', function()
   local path = vim.fn.expand '%:p'
   vim.fn.setreg('+', path)
   vim.api.nvim_echo({ { 'Copied file path' } }, false, {})
