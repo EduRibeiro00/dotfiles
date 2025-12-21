@@ -1,6 +1,3 @@
--- Set block cursor for all modes
-vim.opt.guicursor = 'n-v-c-i:block'
-
 -- Setup Treesitter fold logic
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
@@ -31,21 +28,11 @@ vim.keymap.set('n', '<Esc>', function()
   end
 end, { noremap = true, silent = true })
 
--- Map 'ç' to go to the next code block
-vim.api.nvim_set_keymap('n', 'ç', '}', {
-  noremap = true,
-  silent = true,
-})
-
--- Map 'Ç' to go to the previous code block
-vim.api.nvim_set_keymap('n', 'Ç', '{', {
-  noremap = true,
-  silent = true,
-})
-
 -- Tab navigation
 vim.keymap.set('n', '<C-j>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-j>', '<Esc>:BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-k>', '<Esc>:BufferLineCycleNext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-p>', ':BufferLinePick<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-c>', ':BufferLinePickClose<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-S-c>', ':BufferLineCloseOthers<CR>', { noremap = true, silent = true })
