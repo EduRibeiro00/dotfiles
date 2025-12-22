@@ -28,11 +28,17 @@ vim.keymap.set('n', '<Esc>', function()
   end
 end, { noremap = true, silent = true })
 
+-- Shortcut for opening a terminal
+vim.keymap.set('n', '<leader>vt', ':term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
+
 -- Tab navigation
 vim.keymap.set('n', '<C-j>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-j>', '<Esc>:BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '<Esc>:BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n>:BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n>:BufferLineCycleNext<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<C-p>', ':BufferLinePick<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-c>', ':BufferLinePickClose<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-S-c>', ':BufferLineCloseOthers<CR>', { noremap = true, silent = true })
