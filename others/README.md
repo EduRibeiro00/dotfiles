@@ -4,6 +4,10 @@
 
 Homebrew is a package manager for MacOS, that will allow the installation of other tools stated here. It can be installed using [this link](https://brew.sh/).
 
+## Raycast
+
+Raycast is a productivity app and "Spotlight" alternative for MacOS. It can be installed using [this link](https://www.raycast.com/). For configuration, set the `cmd+ç` as the hotkey for the Raycast search bar.
+
 ## Rectangle
 
 Rectangle is a simple window manager. It can be installed using [this link](https://rectangleapp.com/).
