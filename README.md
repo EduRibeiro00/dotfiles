@@ -6,7 +6,7 @@ This repo contains all the essential tools and respective configuration files ne
 - `/iterm` - Contains the `.itermexport` file that can be imported to immediately configure the iTerm2 terminal.
 - `/nvim` - Contains my NeoVim configuration.
 - `/oh-my-zsh-custom` - Contains the custom plugins and themes that should be imported into Oh My Zsh.
-- `/others` - Contains info about how to install and configure other tools, such as Rectangle, Alfred, and others. Also contains some MacOS settings that should be changed.
+- `/others` - Contains info about how to install and configure other tools, such as Rectangle, Raycast, and others. Also contains some MacOS settings that should be changed.
 - `/vscode` - Contains info about all necessary extensions that should be installed, as well as user settings, keybindings, and snippets.
 - `/zsh` - Contains the `.zshrc` file that configures the zsh terminal.
 
