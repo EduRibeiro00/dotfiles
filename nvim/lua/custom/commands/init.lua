@@ -73,3 +73,7 @@ vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent selection', silent = true }
 vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent selection', silent = true })
 vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indent line', silent = true })
 vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Unindent line', silent = true })
+
+-- Quickfix list commands
+vim.keymap.set('n', '<C-n>', '<cmd>cnext<CR>', { desc = 'See next result in quickfix list', silent = true })
+vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>', { desc = 'See previous result in quickfix list', silent = true })
