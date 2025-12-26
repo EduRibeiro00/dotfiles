@@ -5,7 +5,7 @@ return {
   config = function()
     require('bufferline').setup {
       options = {
-        mode = 'tabs', -- set to "tabs" to only show tabpages instead
+        mode = 'buffers', -- set to "tabs" to only show tabpages instead
         themable = true,
         numbers = 'none',
         close_command = 'bdelete! %d',

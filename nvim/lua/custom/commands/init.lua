@@ -29,7 +29,12 @@ vim.keymap.set('n', '<Esc>', function()
 end, { noremap = true, silent = true })
 
 -- Shortcut for opening a terminal
-vim.keymap.set('n', '<leader>vt', ':tabnew | term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
+vim.keymap.set('n', '<leader>vt', ':term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
+
+-- Shortcut for Oil
+vim.keymap.set('n', '<leader>e', function()
+  require('oil').toggle_float()
+end, { desc = 'Toggle Oil float' })
 
 -- Tab navigation
 vim.keymap.set('n', '<C-j>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })

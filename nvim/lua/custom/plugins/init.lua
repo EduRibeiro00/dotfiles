@@ -3,4 +3,5 @@ return {
   require 'custom.plugins.bufferlines',
   require 'custom.plugins.git-conflict',
   require 'custom.plugins.vim-visual-multi',
+  require 'custom.plugins.oil',
 }
