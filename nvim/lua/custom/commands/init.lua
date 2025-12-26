@@ -29,7 +29,7 @@ vim.keymap.set('n', '<Esc>', function()
 end, { noremap = true, silent = true })
 
 -- Shortcut for opening a terminal
-vim.keymap.set('n', '<leader>vt', ':term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
+vim.keymap.set('n', '<leader>vt', ':tabnew | term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
 
 -- Tab navigation
 vim.keymap.set('n', '<C-j>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })

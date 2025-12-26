@@ -139,5 +139,9 @@
   {
     "key": "cmd+shift+space",
     "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.createTerminalEditor"
   }
 ]

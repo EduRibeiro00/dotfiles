@@ -307,12 +307,36 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
+        -- defaults = {
+        --   -- mappings = {
+        --   --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+        --   -- },
+        -- },
         defaults = {
-          -- mappings = {
-          --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-          -- },
           path_display = { 'truncate' }, -- Truncates file paths to always show the filenames
+          mappings = {
+            i = {
+              -- Delete buffer from within Telescope with Ctrl-d
+              ['<C-d>'] = require('telescope.actions').delete_buffer,
+            },
+            n = {
+              -- Delete buffer from within Telescope with Ctrl-d
+              ['<C-d>'] = require('telescope.actions').delete_buffer,
+            },
+          },
         },
+        pickers = {
+          buffers = {
+            sort_mru = true, -- Most recently used first
+            ignore_current_buffer = false,
+            mappings = {
+              i = {
+                ['<C-d>'] = 'delete_buffer', -- Close buffer
+              },
+            },
+          },
+        },
+
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
