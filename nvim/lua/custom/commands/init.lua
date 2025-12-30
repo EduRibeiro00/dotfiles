@@ -15,6 +15,9 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+-- Shortcut to save files
+vim.keymap.set('n', '<leader>s', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
+
 -- Clear search results if they exist using escape key
 vim.keymap.set('n', '<Esc>', function()
   if vim.fn.getqflist({ winid = 0 }).winid ~= 0 then
@@ -32,7 +35,7 @@ end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>vt', ':term<CR>', { noremap = true, silent = true, desc = 'Open terminal buffer' })
 
 -- Shortcut for Oil
-vim.keymap.set('n', '<leader>e', function()
+vim.keymap.set('n', '-', function()
   require('oil').toggle_float()
 end, { desc = 'Toggle Oil float' })
 
