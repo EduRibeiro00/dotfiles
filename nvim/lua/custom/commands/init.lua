@@ -17,7 +17,7 @@ vim.opt.autoindent = true
 
 -- Automatically detect changes in files
 vim.opt.autoread = true
-vim.opt.updatedtime = 500
+vim.opt.updatetime = 500
 vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHoldI' }, {
   callback = function()
     if vim.fn.mode() ~= 'c' then
