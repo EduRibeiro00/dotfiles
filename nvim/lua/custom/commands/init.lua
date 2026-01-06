@@ -15,6 +15,17 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+-- Automatically detect changes in files
+vim.opt.autoread = true
+vim.opt.updatedtime = 500
+vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHoldI' }, {
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd 'checktime'
+    end
+  end,
+})
+
 -- Shortcut to save files
 vim.keymap.set('n', '<leader>s', ':w<CR>', { noremap = true, silent = true, desc = 'Save file' })
 
@@ -52,12 +63,12 @@ vim.keymap.set('n', '<C-c>', ':BufferLinePickClose<CR>', { noremap = true, silen
 vim.keymap.set('n', '<C-S-c>', ':BufferLineCloseOthers<CR>', { noremap = true, silent = true })
 
 -- Keymaps for git-conflict plugin
-vim.keymap.set('n', '<leader>co', '<Plug>(git-conflict-ours)', { desc = 'Accept current (ours)' })
-vim.keymap.set('n', '<leader>ct', '<Plug>(git-conflict-theirs)', { desc = 'Accept incoming (theirs)' })
-vim.keymap.set('n', '<leader>cb', '<Plug>(git-conflict-both)', { desc = 'Accept both' })
-vim.keymap.set('n', '<leader>c0', '<Plug>(git-conflict-none)', { desc = 'Accept none' })
-vim.keymap.set('n', '<leader>cn', '<Plug>(git-conflict-next-conflict)', { desc = 'Next conflict' })
-vim.keymap.set('n', '<leader>cp', '<Plug>(git-conflict-prev-conflict)', { desc = 'Previous conflict' })
+vim.keymap.set('n', '<leader>gco', '<Plug>(git-conflict-ours)', { desc = 'Accept current (ours)' })
+vim.keymap.set('n', '<leader>gct', '<Plug>(git-conflict-theirs)', { desc = 'Accept incoming (theirs)' })
+vim.keymap.set('n', '<leader>gcb', '<Plug>(git-conflict-both)', { desc = 'Accept both' })
+vim.keymap.set('n', '<leader>gc0', '<Plug>(git-conflict-none)', { desc = 'Accept none' })
+vim.keymap.set('n', '<leader>gcn', '<Plug>(git-conflict-next-conflict)', { desc = 'Next conflict' })
+vim.keymap.set('n', '<leader>gcp', '<Plug>(git-conflict-prev-conflict)', { desc = 'Previous conflict' })
 
 -- Tab/buffer management
 vim.keymap.set('n', '<leader>w', '<cmd>bd<cr>', { desc = 'Close current buffer' })
