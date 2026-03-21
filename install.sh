@@ -83,9 +83,13 @@ cat "./vscode/extensions.txt" | xargs -L 1 code --install-extension
 echo -e "\n${YELLOW}=== Zsh Configuration ===${NC}"
 create_symlink "./zsh/.zshrc" "$HOME/.zshrc"
 
-# tmux
+# # tmux
 echo -e "\n${YELLOW}=== tmux Configuration ===${NC}"
 create_symlink "./tmux/tmux.conf" "$HOME/.tmux.conf"
+
+# Aerospace
+echo -e "\n${YELLOW}=== Aerospace Configuration ===${NC}"
+create_symlink "./aerospace/aerospace.toml" "$HOME/.aerospace.toml"
 
 echo -e "\n${GREEN}Dotfiles installation complete!${NC}"
 echo -e "${YELLOW}Note: You may need to restart your terminal or source your shell configuration.${NC}"

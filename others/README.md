@@ -8,10 +8,6 @@ Homebrew is a package manager for MacOS, that will allow the installation of oth
 
 Raycast is a productivity app and "Spotlight" alternative for MacOS. It can be installed using [this link](https://www.raycast.com/). For configuration, set the `cmd+ç` as the hotkey for the Raycast search bar.
 
-## Rectangle
-
-Rectangle is a simple window manager. It can be installed using [this link](https://rectangleapp.com/).
-
 ## fzf
 
 fzf is a command-line fuzzy finder, that is used as the basis for some commands defined in the `.zshrc` file. It can be installed by running the command `brew install fzf`.
