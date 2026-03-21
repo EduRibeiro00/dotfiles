@@ -91,5 +91,10 @@ create_symlink "./tmux/tmux.conf" "$HOME/.tmux.conf"
 echo -e "\n${YELLOW}=== Aerospace Configuration ===${NC}"
 create_symlink "./aerospace/aerospace.toml" "$HOME/.aerospace.toml"
 
+# Aerospace
+echo -e "\n${YELLOW}=== SketchyBar Configuration ===${NC}"
+create_symlink "./sketchybar/plugins" "$HOME/.config/sketchybar/plugins"
+create_symlink "./sketchybar/sketchybarrc" "$HOME/.config/sketchybar/sketchybarrc"
+
 echo -e "\n${GREEN}Dotfiles installation complete!${NC}"
 echo -e "${YELLOW}Note: You may need to restart your terminal or source your shell configuration.${NC}"
