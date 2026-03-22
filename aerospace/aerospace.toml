@@ -4,8 +4,11 @@
 
 after-login-command = []
 
-# Run Sketchybar together with AeroSpace
-after-startup-command = ['exec-and-forget sketchybar']
+# Run SketchyBar and JankyBorders together with AeroSpace
+after-startup-command = [
+  'exec-and-forget sketchybar', 
+  'exec-and-forget borders'
+]
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
@@ -26,12 +29,12 @@ preset = 'qwerty'
 
 # Edge-to-edge
 [gaps]
-inner.horizontal = 10
-inner.vertical = 10
-outer.left = 10
-outer.bottom = 10
-outer.top = 10
-outer.right = 10
+inner.horizontal = 15
+inner.vertical = 15
+outer.left = 15
+outer.bottom = 15
+outer.top = 45
+outer.right = 15
 
 # ┌──────────────────────────────────────────────────────────────┐
 # │  Main mode                                                   │
