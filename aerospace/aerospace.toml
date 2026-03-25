@@ -1,12 +1,12 @@
 # ╔══════════════════════════════════════════════════════════════╗
-# ║  AeroSpace — edge-to-edge, vim-style                        ║
+# ║  AeroSpace — edge-to-edge, vim-style                         ║
 # ╚══════════════════════════════════════════════════════════════╝
 
 after-login-command = []
 
 # Run SketchyBar and JankyBorders together with AeroSpace
 after-startup-command = [
-  'exec-and-forget sketchybar', 
+  'exec-and-forget sketchybar',
   'exec-and-forget borders'
 ]
 
@@ -33,8 +33,12 @@ inner.horizontal = 15
 inner.vertical = 15
 outer.left = 15
 outer.bottom = 15
-outer.top = 45
 outer.right = 15
+outer.top = [
+  { monitor."Built-in *" = 45 }, # built-in monitor
+  { monitor."PHL *" = 45}, # home monitor
+  45 # default
+]
 
 # ┌──────────────────────────────────────────────────────────────┐
 # │  Main mode                                                   │
@@ -42,49 +46,55 @@ outer.right = 15
 [mode.main.binding]
 
 # Layout
-alt-period = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-alt-shift-f = 'fullscreen'
+ctrl-alt-cmd-period = 'layout tiles horizontal vertical'
+ctrl-alt-cmd-comma = 'layout accordion horizontal vertical'
+ctrl-alt-cmd-f = 'fullscreen'
 
-# Focus (vim hjkl)
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+# Focus (vim hjkl) — hyper = caps lock via Raycast
+ctrl-alt-cmd-h = 'focus left'
+ctrl-alt-cmd-j = 'focus down'
+ctrl-alt-cmd-k = 'focus up'
+ctrl-alt-cmd-l = 'focus right'
 
 # Move windows
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+shift-ctrl-alt-cmd-h = 'move left'
+shift-ctrl-alt-cmd-j = 'move down'
+shift-ctrl-alt-cmd-k = 'move up'
+shift-ctrl-alt-cmd-l = 'move right'
 
 # Resize
-alt-minus = 'resize smart -50'
-alt-equal = 'resize smart +50'
+ctrl-alt-cmd-minus = 'resize smart -50'
+ctrl-alt-cmd-equal = 'resize smart +50'
 
-# Workspaces
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
+# Workspaces — hyper = caps lock via Raycast
+ctrl-alt-cmd-1 = 'workspace 1'
+ctrl-alt-cmd-2 = 'workspace 2'
+ctrl-alt-cmd-3 = 'workspace 3'
+ctrl-alt-cmd-4 = 'workspace 4'
+ctrl-alt-cmd-5 = 'workspace 5'
+ctrl-alt-cmd-6 = 'workspace 6'
+ctrl-alt-cmd-7 = 'workspace 7'
+ctrl-alt-cmd-8 = 'workspace 8'
+ctrl-alt-cmd-9 = 'workspace 9'
 
 # Move to workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
+shift-ctrl-alt-cmd-1 = 'move-node-to-workspace 1'
+shift-ctrl-alt-cmd-2 = 'move-node-to-workspace 2'
+shift-ctrl-alt-cmd-3 = 'move-node-to-workspace 3'
+shift-ctrl-alt-cmd-4 = 'move-node-to-workspace 4'
+shift-ctrl-alt-cmd-5 = 'move-node-to-workspace 5'
+shift-ctrl-alt-cmd-6 = 'move-node-to-workspace 6'
+shift-ctrl-alt-cmd-7 = 'move-node-to-workspace 7'
+shift-ctrl-alt-cmd-8 = 'move-node-to-workspace 8'
+shift-ctrl-alt-cmd-9 = 'move-node-to-workspace 9'
 
-# Workspace switching
-alt-tab = 'workspace-back-and-forth'
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# Workspace switching — hyper = caps lock via Raycast
+ctrl-alt-cmd-space = 'workspace-back-and-forth'
+shift-ctrl-alt-cmd-space = 'move-workspace-to-monitor --wrap-around next'
 
 # Enter modes
-alt-shift-comma = 'mode service'
-alt-r = 'mode resize'
+shift-ctrl-alt-cmd-comma = 'mode service'
+ctrl-alt-cmd-r = 'mode resize'
 
 # ┌──────────────────────────────────────────────────────────────┐
 # │  Resize mode — hjkl to resize, esc to exit                   │
@@ -108,10 +118,10 @@ r = ['flatten-workspace-tree', 'mode main']
 f = ['layout floating tiling', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+shift-ctrl-alt-cmd-h = ['join-with left', 'mode main']
+shift-ctrl-alt-cmd-j = ['join-with down', 'mode main']
+shift-ctrl-alt-cmd-k = ['join-with up', 'mode main']
+shift-ctrl-alt-cmd-l = ['join-with right', 'mode main']
 
 down = 'volume down'
 up = 'volume up'
