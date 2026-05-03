@@ -1,4 +1,5 @@
 format = """
+$hostname
 $directory\
 $git_branch\
 $git_status\
@@ -21,18 +22,18 @@ $character"""
 add_newline = true
 palette = 'nord'
 
+[hostname]
+ssh_only = true
+ssh_symbol = '🌐 '
+format = '[$ssh_symbol$hostname ]($style)'
+style = 'bold fg:yellow'
+
 [directory]
 style = 'bold fg:dark_blue'
 format = '[$path ]($style)'
 truncation_length = 3
 truncation_symbol = '…/'
 truncate_to_repo = false
-
-[directory.substitutions]
-'Documents' = '󰈙'
-'Downloads' = ' '
-'Music' = ' '
-'Pictures' = ' '
 
 [git_branch]
 style = 'fg:green'
