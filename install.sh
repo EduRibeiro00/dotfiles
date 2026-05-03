@@ -67,9 +67,13 @@ echo -e "${GREEN}Starting dotfiles installation...${NC}"
 echo -e "\n${YELLOW}=== Neovim Configuration ===${NC}"
 create_symlink "./nvim" "$HOME/.config/nvim"
 
-# Oh My Zsh Custom
-echo -e "\n${YELLOW}=== Oh My Zsh Custom ===${NC}"
-create_symlink "./oh-my-zsh-custom" "$HOME/.oh-my-zsh/custom"
+# Ghostty
+echo -e "\n${YELLOW}=== Ghostty Configuration ===${NC}"
+create_symlink "./ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+
+# Starship
+echo -e "\n${YELLOW}=== Starship Configuration ===${NC}"
+create_symlink "./starship/starship.toml" "$HOME/.config/starship.toml"
 
 # VS Code
 VSCODE_USER="$HOME/Library/Application Support/Code/User"
@@ -83,7 +87,7 @@ cat "./vscode/extensions.txt" | xargs -L 1 code --install-extension
 echo -e "\n${YELLOW}=== Zsh Configuration ===${NC}"
 create_symlink "./zsh/.zshrc" "$HOME/.zshrc"
 
-# # tmux
+# tmux
 echo -e "\n${YELLOW}=== tmux Configuration ===${NC}"
 create_symlink "./tmux/tmux.conf" "$HOME/.tmux.conf"
 

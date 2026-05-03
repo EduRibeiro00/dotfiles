@@ -6,7 +6,7 @@ local themes = {
     config = function()
       require('onedark').setup {
         style = 'darker', -- other styles: 'cool', 'warm', 'warmer', 'deep'
-        -- transparent = 'true',
+        transparent = true,
       }
       require('onedark').load()
     end,
@@ -24,7 +24,7 @@ local themes = {
             keywords = 'bold',
             functions = 'italic,bold',
           },
-          -- transparent = 'true',
+          transparent = true,
         },
       }
       vim.cmd 'colorscheme carbonfox' -- options: carbonfox, nightfox, duskfox, nordfox, terafox

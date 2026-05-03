@@ -1,0 +1,24 @@
+# Font
+font-family = FiraCode Nerd Font Mono
+font-size = 13.5
+font-feature = calt # enable ligatures (FiraCode's main feature)
+
+# Background/Transparency
+background = 1a1a2e
+background-opacity = 0.80
+background-blur = 10
+
+# Padding
+window-padding-x = 10
+window-padding-y = 4
+window-padding-balance = true
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Misc
+mouse-hide-while-typing = true
+
+# tmux compatibility
+term = xterm-256color
