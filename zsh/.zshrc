@@ -50,6 +50,7 @@ ranger-cd() {
   rm -f -- "$temp_file"
 }
 alias r="ranger-cd"
+alias cc="claude --dangerously-skip-permissions"
 
 # Git aliases
 alias gs="git status -s"
