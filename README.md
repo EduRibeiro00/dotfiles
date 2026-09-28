@@ -3,7 +3,7 @@
 This repo contains all the essential tools and respective configuration files needed for setting up the environment in a new machine. It contains the following folders:
 
 - `/aerospace` - Contains all configurations for the tiling manager Aerospace.
-- `/brew` - Contains all necessary Homebrew installations (TODO).
+- `/brew` - Contains the `Brewfile` with all necessary Homebrew installations.
 - `/firefox` - Contains all necessary Firefox add-ons and bookmarks that should be imported.
 - `/ghostty` - Contains the configuration file that can be imported to immediately configure the Ghostty terminal.
 - `/jankyborders` - Contains the configuration files for JankyBorders, the tool that allows to set the borders around the windows.
@@ -14,6 +14,7 @@ This repo contains all the essential tools and respective configuration files ne
 - `/starship` - Contains the configuration file for Starship.
 - `/tmux` -  Contains the `tmux.conf` file necessary to configure tmux.
 - `/vscode` - Contains info about all necessary extensions that should be installed, as well as user settings, keybindings, and snippets.
+- `/wallpaper` - Contains the desktop wallpaper image used on this machine.
 - `/zsh` - Contains the `.zshrc` file that configures the zsh terminal.
 
 We can automatically install and create symlinks for the configurations of `NeoVim`, `Aerospace`, `Ghostty`, `VSCode`, `zsh` and more, by doing:

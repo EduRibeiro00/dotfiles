@@ -10,6 +10,15 @@ Firefox bookmarks can be exported by going to `Bookmarks menu → Manage Bookmar
 
 They can be imported by going to the same menu, and choosing the `Import from HTML` option.
 
+## Browser UI
+
+- **Show the Bookmarks (favorites) Toolbar**: right-click on the tab bar (or any toolbar) → `Bookmarks Toolbar` → `Always Show`.
+- **Move tabs to the sidebar and hide the native tab bar**, so only Tree Style Tab's sidebar is visible:
+  1. Go to `about:config`, search for `toolkit.legacyUserProfileCustomizations.stylesheets`, and set it to `true`.
+  2. Go to `about:support`, find "Profile Folder", and click "Open Folder".
+  3. Create a `chrome` folder inside it (if it doesn't already exist) and copy `/firefox/chrome/userChrome.css` from this repo into it.
+  4. Restart Firefox.
+
 ## Extensions 
 
 The `/firefox/extensions` folder contains all configuration files related to Firefox add-ons.

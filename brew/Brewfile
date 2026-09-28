@@ -1,0 +1,33 @@
+# Taps
+tap "FelixKratz/formulae"
+tap "nikitabobko/tap"
+
+# CLI tools
+brew "mas" # needed to install Mac App Store apps below
+brew "neovim"
+brew "starship"
+brew "tmux"
+brew "fzf"
+brew "ripgrep"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
+brew "ranger"
+brew "nvm"
+brew "sketchybar"
+brew "borders"
+brew "gh"
+brew "tailscale" # non-sandboxed CLI/daemon, needed for Tailscale SSH support
+
+# Casks (GUI apps)
+cask "ghostty"
+cask "visual-studio-code"
+cask "firefox"
+cask "raycast"
+cask "nikitabobko/tap/aerospace"
+cask "flux-app"
+
+# Fonts
+cask "font-fira-code-nerd-font"
+
+# Mac App Store apps (requires being signed in to the App Store app)
+mas "Amphetamine", id: 937984704
