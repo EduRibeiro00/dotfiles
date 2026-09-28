@@ -25,6 +25,7 @@ cask "firefox"
 cask "raycast"
 cask "nikitabobko/tap/aerospace"
 cask "flux-app"
+cask "obsidian"
 
 # Fonts
 cask "font-fira-code-nerd-font"

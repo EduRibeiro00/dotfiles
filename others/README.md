@@ -12,6 +12,12 @@ Raycast is a productivity app and "Spotlight" alternative for MacOS, installed v
 - map the Hyper Key to Caps Lock, without the Shift key (`Settings` → `Hyper Key`)
 - set the navigation bindings to vim motions (`Settings` → `Advanced` → `Custom Navigation Bindings` → `Emacs/Vim style navigation`)
 
+## Obsidian
+
+Obsidian is a markdown-based note-taking app, installed via the `brew/Brewfile`. For configuration:
+
+- turn on vim key bindings (`Settings` → `Editor` → `Vim key bindings`)
+
 ## fzf
 
 fzf is a command-line fuzzy finder, that is used as the basis for some commands defined in the `.zshrc` file. It's installed via the `brew/Brewfile`.
