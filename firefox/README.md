@@ -37,7 +37,7 @@ For importing the extensions into Firefox, we can manually download them one by 
 One of the extensions that should be present in the `extensions-list.json` file is the [Tree Style Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/) extension. This extension also has some configuration files of its own, that are present in the `/firefox/extensions/tree-style-tabs` folder:
 
 - `tst-settings.json` - main settings/configuration file for Tree Style Tabs. Can also be exported/imported in the Tree Style Tabs configuration page.
-- `custom-css.json` - custom CSS that can be applied to the tabs panel. Can also be exported/imported in the Tree Style Tabs configuration page.
+- `custom-css.css` - custom CSS that can be applied to the tabs panel. Can be loaded/saved via the "Load from File" / "Save as File" buttons next to the custom style rules field in the Tree Style Tab configuration page.
 
 ### Shortkeys
 
