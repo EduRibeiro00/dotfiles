@@ -18,6 +18,10 @@ Obsidian is a markdown-based note-taking app, installed via the `brew/Brewfile`.
 
 - turn on vim key bindings (`Settings` → `Editor` → `Vim key bindings`)
 
+## T3 Code
+
+T3 Code is a minimal GUI for AI code agents, installed via the `brew/Brewfile` (as the `t3-code` cask).
+
 ## fzf
 
 fzf is a command-line fuzzy finder, that is used as the basis for some commands defined in the `.zshrc` file. It's installed via the `brew/Brewfile`.
