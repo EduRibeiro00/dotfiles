@@ -130,6 +130,10 @@ create_symlink "./sketchybar/colors.sh" "$HOME/.config/sketchybar/colors.sh"
 echo -e "\n${YELLOW}=== JankyBorders Configuration ===${NC}"
 create_symlink "./jankyborders/bordersrc" "$HOME/.config/borders/bordersrc"
 
+# Handy
+echo -e "\n${YELLOW}=== Handy Configuration ===${NC}"
+create_symlink "./handy/settings_store.json" "$HOME/Library/Application Support/com.pais.handy/settings_store.json"
+
 # Wallpaper
 echo -e "\n${YELLOW}=== Wallpaper ===${NC}"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$(realpath ./wallpaper/wallpaper-boat.png)\""

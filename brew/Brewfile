@@ -27,6 +27,7 @@ cask "nikitabobko/tap/aerospace"
 cask "flux-app"
 cask "obsidian"
 cask "t3-code"
+cask "handy"
 
 # Fonts
 cask "font-fira-code-nerd-font"

@@ -6,6 +6,7 @@ This repo contains all the essential tools and respective configuration files ne
 - `/brew` - Contains the `Brewfile` with all necessary Homebrew installations.
 - `/firefox` - Contains all necessary Firefox add-ons and bookmarks that should be imported.
 - `/ghostty` - Contains the configuration file that can be imported to immediately configure the Ghostty terminal.
+- `/handy` - Contains the settings file for Handy, the speech-to-text dictation app.
 - `/jankyborders` - Contains the configuration files for JankyBorders, the tool that allows to set the borders around the windows.
 - `/nvim` - Contains my NeoVim configuration.
 - `/old` - Folder containing old configurations or tools that I no longer use for my setup.
