@@ -83,7 +83,7 @@ symbol = '󰏗 '
 [aws]
 symbol = ' '
 style = 'yellow'
-format = '[$symbol($profile )(\[$duration\] )]($style)'
+format = '[$symbol($profile )(\($region\) )]($style)'
 
 [docker_context]
 symbol = ' '
