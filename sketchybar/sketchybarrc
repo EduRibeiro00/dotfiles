@@ -109,7 +109,7 @@ sketchybar --add item clock right \
            --subscribe battery system_woke power_source_change \
            --add item sep.3 right --set sep.3 "${separator[@]}" \
            --add item cpu right \
-           --set cpu update_freq=2 icon=󰻠 script="$PLUGIN_DIR/cpu.sh" \
+           --set cpu update_freq=5 icon=󰻠 script="$PLUGIN_DIR/cpu.sh" \
            --add item sep.4 right --set sep.4 "${separator[@]}" \
            --add item ram right \
            --set ram update_freq=10 icon=󰍛 script="$PLUGIN_DIR/ram.sh" \
