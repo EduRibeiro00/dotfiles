@@ -73,20 +73,53 @@ sketchybar --add item front_app left \
 # volume is registered. More info about the event system can be found here:
 # https://felixkratz.github.io/SketchyBar/config/events
 
+separator=(
+  icon.drawing=off
+  label="|"
+  label.color=$SEPARATOR_COLOR
+  label.padding_left=3
+  label.padding_right=7
+  padding_left=0
+  padding_right=0
+)
+
+# The up/down lines are two items stacked on top of each other (sketchybar has no
+# multi-line labels). The top one has width=0 and sits to the right of the bottom
+# one, so its text overflows leftwards over it; network.sh sets the same label width on both.
+network_line=(
+  icon.drawing=off
+  label.font="Hack Nerd Font:Bold:9.0"
+  label.align=right
+  padding_left=0
+  padding_right=0
+)
+
+# Right-hand cells keep only their label padding, so the separators sit close
+sketchybar --default padding_left=0 padding_right=0
+
 sketchybar --add item clock right \
            --set clock update_freq=10 icon=󰃶  script="$PLUGIN_DIR/clock.sh" \
+           --add item sep.1 right --set sep.1 "${separator[@]}" \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
+           --add item sep.2 right --set sep.2 "${separator[@]}" \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
+           --add item sep.3 right --set sep.3 "${separator[@]}" \
            --add item cpu right \
-           --set cpu update_freq=2 icon=󰍛 script="$PLUGIN_DIR/cpu.sh" \
+           --set cpu update_freq=2 icon=󰻠 script="$PLUGIN_DIR/cpu.sh" \
+           --add item sep.4 right --set sep.4 "${separator[@]}" \
            --add item ram right \
-           --set ram update_freq=10 icon=󰘚 script="$PLUGIN_DIR/ram.sh" \
+           --set ram update_freq=10 icon=󰍛 script="$PLUGIN_DIR/ram.sh" \
+           --add item sep.5 right --set sep.5 "${separator[@]}" \
+           --add item network.down right \
+           --set network.down "${network_line[@]}" y_offset=6 width=0 \
+           --add item network.up right \
+           --set network.up "${network_line[@]}" y_offset=-6 padding_left=4 \
            --add item network right \
-           --set network update_freq=10 script="$PLUGIN_DIR/network.sh"
+           --set network update_freq=10 label.drawing=off script="$PLUGIN_DIR/network.sh"
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

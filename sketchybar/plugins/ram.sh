@@ -10,4 +10,4 @@ RAM_USED=$(vm_stat | awk '
 
 RAM_PERCENT=$(echo "$RAM_USED $RAM_TOTAL" | awk '{printf "%.0f", ($1/$2)*100}')
 
-sketchybar --set $NAME label="${RAM_USED}GB/${RAM_TOTAL}GB (${RAM_PERCENT}%)"
+sketchybar --set $NAME label="${RAM_PERCENT}%"

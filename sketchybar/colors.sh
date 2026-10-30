@@ -5,3 +5,4 @@ export WHITE=0xffffffff
 export BAR_COLOR=0xaa07172f
 export ITEM_BG_COLOR=0xff003547
 export ACCENT_COLOR=0xff2cf9ed
+export SEPARATOR_COLOR=0x66ffffff

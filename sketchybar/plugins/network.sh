@@ -17,7 +17,7 @@ done < <(networksetup -listnetworkserviceorder | sed -n 's/^ *(Hardware Port: \(
 
 if [ -z "$ACTIVE_DEV" ]; then
   rm -f "$STATE_FILE"
-  sketchybar --set $NAME icon=󰖪 label="↓ -- ↑ --"
+  sketchybar --set $NAME icon=󰖪 --set network.down label="↓ --" label.width=22 --set network.up label="↑ --" label.width=22
   exit 0
 fi
 
@@ -53,4 +53,15 @@ IFS='|' read -r DOWN UP < <(awk -v same="$([ "$PREV_DEV" = "$ACTIVE_DEV" ] && ec
     printf "%s|%s", fmt(rd), fmt(td)
   }')
 
-sketchybar --set $NAME icon=$ICON label="↓ $DOWN ↑ $UP"
+# Monospace, so padding between the arrow and the value gives both lines the same length:
+# arrows share a column and the values end at the same edge. Leading spaces would be
+# trimmed, inner ones are not.
+LEN=$(( ${#DOWN} > ${#UP} ? ${#DOWN} : ${#UP} ))
+PAD_DOWN=$(printf '%*s' $(( LEN - ${#DOWN} )) '')
+PAD_UP=$(printf '%*s' $(( LEN - ${#UP} )) '')
+# ~5.4px per char at 9pt, plus the arrow and its space
+WIDTH=$(( ((LEN + 2) * 54 + 9) / 10 + 2 ))
+
+sketchybar --set $NAME icon=$ICON \
+  --set network.down label="↓ $PAD_DOWN$DOWN" label.width=$WIDTH \
+  --set network.up label="↑ $PAD_UP$UP" label.width=$WIDTH
