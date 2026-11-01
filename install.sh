@@ -134,6 +134,18 @@ create_symlink "./jankyborders/bordersrc" "$HOME/.config/borders/bordersrc"
 echo -e "\n${YELLOW}=== Handy Configuration ===${NC}"
 create_symlink "./handy/settings_store.json" "$HOME/Library/Application Support/com.pais.handy/settings_store.json"
 
+# Firefox
+echo -e "\n${YELLOW}=== Firefox Configuration ===${NC}"
+FIREFOX_DIR="$HOME/Library/Application Support/Firefox"
+# installs.ini points at the profile this Firefox install actually uses
+FIREFOX_PROFILE=$(grep -m1 '^Default=' "$FIREFOX_DIR/installs.ini" 2>/dev/null | cut -d= -f2)
+if [[ -n "$FIREFOX_PROFILE" && -d "$FIREFOX_DIR/$FIREFOX_PROFILE" ]]; then
+    create_symlink "./firefox/chrome/userChrome.css" "$FIREFOX_DIR/$FIREFOX_PROFILE/chrome/userChrome.css"
+    create_symlink "./firefox/user.js" "$FIREFOX_DIR/$FIREFOX_PROFILE/user.js"
+else
+    echo -e "${YELLOW}SKIP: No Firefox profile found. Launch Firefox once and re-run this script.${NC}"
+fi
+
 # Wallpaper
 echo -e "\n${YELLOW}=== Wallpaper ===${NC}"
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$(realpath ./wallpaper/wallpaper-boat.png)\""
