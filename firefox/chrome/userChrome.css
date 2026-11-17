@@ -12,9 +12,8 @@
 }
 
 /* Hide the revamped sidebar's panel header (panel-switcher dropdown + close button)
-   shown above extension-hosted panels like Tree Style Tab */
-@-moz-document url-prefix("chrome://browser/content/webext-panels.xhtml") {
-  #sidebar-panel-header {
-    display: none !important;
-  }
+   shown above extension-hosted panels like Tree Style Tab. It lives in browser.xhtml,
+   not in the extension panel's own document. */
+#sidebar-panel-header {
+  display: none !important;
 }

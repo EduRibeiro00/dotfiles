@@ -81,6 +81,10 @@ if command -v brew &> /dev/null; then
     # Trust third-party taps used by the Brewfile (e.g. sketchybar, borders)
     brew trust --tap FelixKratz/formulae
     brew bundle --file="./brew/Brewfile"
+
+    if ! gh extension list | grep -q "github/gh-stack"; then
+        gh extension install github/gh-stack
+    fi
 else
     echo -e "${RED}ERROR: Homebrew installation failed. Install it manually from https://brew.sh/ and re-run this script.${NC}"
 fi
